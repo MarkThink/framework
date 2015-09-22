@@ -6,9 +6,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class LeapYearController
 {
-    public function indexAction($request)
+    public function indexAction($year)
     {
-        if(is_leap_year($request->attributes->get('year'))){
+        if(is_leap_year($year)){
             return new Response('Yep, this is a leap year!');
         }
         return new Response('Nope, this is not a leap year.');
@@ -25,21 +25,10 @@ function is_leap_year($year=null)
 
 $routes = new RouteCollection();
 
-$routes->add('hello',new Route('/hello/{name}',array(
-    'name'=>'world',
-    '_controller'=> function ($request) {
-        $request->attributes->set('foo','bar');
-        $response = render_template($request);
-        $response->headers->set('Content-Type','text/plain');
-        return $response;
-    }
-)));
-$routes->add('leap_year',new Route('/is_leap_year/{year}',array(
+$routes->add('leap_year', new Route('/is_leap_year/{year}', array(
     'year' => null,
-    '_controller'=>array(
-        new LeapYearController(),
-        'indexAction'
-    ),
+    '_controller' => 'LeapYearController::indexAction',
 )));
+
 
 return $routes;

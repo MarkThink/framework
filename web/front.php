@@ -11,14 +11,7 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\Matcher\Dumper\PhpMatcherDumper;
 
-function render_template($request)
-{
-	extract($request->attributes->all(),EXTR_SKIP);
-	ob_start();
-	include sprintf(__DIR__.'/../src/pages/%s.php',$_route);
-	return new Response(ob_get_clean());
-}
-
+use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 
 $request = Request::createFromGlobals();
 
@@ -28,22 +21,15 @@ $context = new RequestContext();
 $context->fromRequest($request);
 $matcher = new UrlMatcher($routes,$context);
 
-//print_r($matcher->match('/bye'));
-//print_r($matcher->match('/hello/Fabien'));
-//print_r($matcher->match('/hello'));
-//$matcher->match('/not-found');
-
-//$generator = new UrlGenerator($routes, $context);
-//$url =  $generator->generate('hello', array('name' => 'Fabien'));
-//$url_abs = $generator->generate('hello', array('name' => 'Fabien'),true);
-
-//创建优化的类替换默认的UrlMatcher 以提升性能
-//$dumper = new PhpMatcherDumper($routes);
-//$dump_routes = $dumper->dump();
+$resolver = new ControllerResolver();
 
 try{
 	$request->attributes->add($matcher->match($request->getPathInfo()));
-	$response = call_user_func($request->attributes->get('_controller'),$request);
+
+	$controller = $resolver->getController($request);
+	$arguments = $resolver->getArguments($request,$controller);
+
+	$response = call_user_func_array($controller,$arguments);
 }catch (ResourceNotFoundException $e){
 	$response = new Response('Not Found',404);
 }catch(\Exception $e){
@@ -52,3 +38,4 @@ try{
 
 
 $response->send();
+
