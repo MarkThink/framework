@@ -11,6 +11,15 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\Matcher\Dumper\PhpMatcherDumper;
 
+function render_template($request)
+{
+	extract($request->attributes->all(),EXTR_SKIP);
+	ob_start();
+	include sprintf(__DIR__.'/../src/pages/%s.php',$_route);
+	return new Response(ob_get_clean());
+}
+
+
 $request = Request::createFromGlobals();
 
 $routes = include __DIR__.'/../src/app.php';
@@ -31,14 +40,6 @@ $matcher = new UrlMatcher($routes,$context);
 //创建优化的类替换默认的UrlMatcher 以提升性能
 //$dumper = new PhpMatcherDumper($routes);
 //$dump_routes = $dumper->dump();
-
-function render_template($request)
-{
-	extract($request->attributes->all(),EXTR_SKIP);
-	ob_start();
-	include sprintf(__DIR__.'/../src/pages/%s.php',$_route);
-	return new Response(ob_get_clean());
-}
 
 try{
 	$request->attributes->add($matcher->match($request->getPathInfo()));
