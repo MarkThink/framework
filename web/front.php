@@ -11,6 +11,10 @@ use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
+use Symfony\Component\HttpKernel\HttpCache\HttpCache;
+use Symfony\Component\HttpKernel\HttpCache\Store;
+use Symfony\Component\HttpKernel\HttpCache\Esi;
+
 use Simplex\Framework;
 
 $dispatcher = new EventDispatcher();
@@ -26,6 +30,8 @@ $matcher = new UrlMatcher($routes,$context);
 $resolver = new ControllerResolver();
 
 $framework = new Framework($dispatcher,$matcher,$resolver);
+//$framework = new HttpCache($framework,new Store(__DIR__.'/../cache'));
+$framework = new HttpCache($framework,new Store(__DIR__.'/../cache'),new Esi(),array('debug'=>true));
 $response = $framework->handle($request);
 
 $response->send();
