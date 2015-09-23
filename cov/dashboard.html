@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/dxwsker/website/trjcn/framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/Users/dxwsker/website/trjcn/framework</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#21">Response</a></td><td class="text-right">9%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#31">Request</a></td><td class="text-right">9%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#21">ResponseHeaderBag</a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#24">FileBag</a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#21">ParameterBag</a></td><td class="text-right">17%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#26">RequestContext</a></td><td class="text-right">18%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#21">HeaderBag</a></td><td class="text-right">21%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ServerBag.php.html#21">ServerBag</a></td><td class="text-right">30%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#28">ControllerResolver</a></td><td class="text-right">33%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#31">Request</a></td><td class="text-right">51814</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#21">Response</a></td><td class="text-right">15922</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#21">ResponseHeaderBag</a></td><td class="text-right">1224</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#21">HeaderBag</a></td><td class="text-right">983</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#21">ParameterBag</a></td><td class="text-right">674</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#26">RequestContext</a></td><td class="text-right">393</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#28">ControllerResolver</a></td><td class="text-right">243</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#24">FileBag</a></td><td class="text-right">227</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ServerBag.php.html#21">ServerBag</a></td><td class="text-right">100</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#580"><abbr title="Response::isValidateable">isValidateable</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#594"><abbr title="Response::setPrivate">setPrivate</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#611"><abbr title="Response::setPublic">setPublic</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#631"><abbr title="Response::mustRevalidate">mustRevalidate</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#567"><abbr title="Response::isFresh">isFresh</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#543"><abbr title="Response::isCacheable">isCacheable</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#446"><abbr title="Response::getProtocolVersion">getProtocolVersion</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#240"><abbr title="RequestContext::setHttpPort">setHttpPort</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#511"><abbr title="Response::setCharset">setCharset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#525"><abbr title="Response::getCharset">getCharset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#645"><abbr title="Response::getDate">getDate</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#672"><abbr title="Response::getAge">getAge</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#793"><abbr title="Response::setSharedMaxAge">setSharedMaxAge</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#813"><abbr title="Response::getTtl">getTtl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#831"><abbr title="Response::setTtl">setTtl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#849"><abbr title="Response::setClientTtl">setClientTtl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#775"><abbr title="Response::setMaxAge">setMaxAge</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#749"><abbr title="Response::getMaxAge">getMaxAge</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#688"><abbr title="Response::expire">expire</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#704"><abbr title="Response::getExpires">getExpires</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#725"><abbr title="Response::setExpires">setExpires</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#252"><abbr title="RequestContext::getHttpsPort">getHttpsPort</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#373"><abbr title="Response::send">send</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#56"><abbr title="FileBag::set">set</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1886"><abbr title="Request::prepareBasePath">prepareBasePath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#278"><abbr title="RequestContext::getQueryString">getQueryString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1941"><abbr title="Request::initializeFormats">initializeFormats</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1760"><abbr title="Request::isXmlHttpRequest">isXmlHttpRequest</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1739"><abbr title="Request::getAcceptableContentTypes">getAcceptableContentTypes</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#188"><abbr title="RequestContext::setHost">setHost</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1667"><abbr title="Request::getLanguages">getLanguages</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1709"><abbr title="Request::getCharsets">getCharsets</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1723"><abbr title="Request::getEncodings">getEncodings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1962"><abbr title="Request::setPhpDefaultLocale">setPhpDefaultLocale</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1984"><abbr title="Request::getUrlencodedPrefix">getUrlencodedPrefix</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#251"><abbr title="Response::__clone">__clone</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#267"><abbr title="Response::prepare">prepare</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#329"><abbr title="Response::sendHeaders">sendHeaders</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#359"><abbr title="Response::sendContent">sendContent</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#240"><abbr title="Response::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#224"><abbr title="Response::create">create</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1999"><abbr title="Request::createRequestFromFactory">createRequestFromFactory</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#2014"><abbr title="Request::isFromTrustedProxy">isFromTrustedProxy</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#266"><abbr title="RequestContext::setHttpsPort">setHttpsPort</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#865"><abbr title="Response::getLastModified">getLastModified</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#881"><abbr title="Response::setLastModified">setLastModified</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#204"><abbr title="ResponseHeaderBag::getCookies">getCookies</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#237"><abbr title="ResponseHeaderBag::clearCookie">clearCookie</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#257"><abbr title="ResponseHeaderBag::makeDisposition">makeDisposition</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#214"><abbr title="RequestContext::setScheme">setScheme</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#176"><abbr title="ResponseHeaderBag::removeCookie">removeCookie</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#162"><abbr title="ResponseHeaderBag::setCookie">setCookie</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#90"><abbr title="ResponseHeaderBag::replace">replace</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#127"><abbr title="ResponseHeaderBag::remove">remove</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#142"><abbr title="ResponseHeaderBag::hasCacheControlDirective">hasCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#150"><abbr title="ResponseHeaderBag::getCacheControlDirective">getCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#200"><abbr title="RequestContext::getScheme">getScheme</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#144"><abbr title="ControllerResolver::createController">createController</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#132"><abbr title="RequestContext::setPathInfo">setPathInfo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#146"><abbr title="RequestContext::getMethod">getMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#160"><abbr title="RequestContext::setMethod">setMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#174"><abbr title="RequestContext::getHost">getHost</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#120"><abbr title="RequestContext::getPathInfo">getPathInfo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#108"><abbr title="RequestContext::setBaseUrl">setBaseUrl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#166"><abbr title="ControllerResolver::instantiateController">instantiateController</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#75"><abbr title="RequestContext::fromRequest">fromRequest</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#94"><abbr title="RequestContext::getBaseUrl">getBaseUrl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#80"><abbr title="ResponseHeaderBag::allPreserveCase">allPreserveCase</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#63"><abbr title="ResponseHeaderBag::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1053"><abbr title="Response::setVary">setVary</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1073"><abbr title="Response::isNotModified">isNotModified</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1118"><abbr title="Response::isInformational">isInformational</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1130"><abbr title="Response::isSuccessful">isSuccessful</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1029"><abbr title="Response::getVary">getVary</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1017"><abbr title="Response::hasVary">hasVary</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#901"><abbr title="Response::getEtag">getEtag</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#916"><abbr title="Response::setEtag">setEtag</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#944"><abbr title="Response::setCache">setCache</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#997"><abbr title="Response::setNotModified">setNotModified</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1142"><abbr title="Response::isRedirection">isRedirection</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1154"><abbr title="Response::isClientError">isClientError</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1228"><abbr title="Response::isEmpty">isEmpty</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1241"><abbr title="Response::closeOutputBuffers">closeOutputBuffers</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1261"><abbr title="Response::ensureIEOverSSLCompatibility">ensureIEOverSSLCompatibility</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#226"><abbr title="RequestContext::getHttpPort">getHttpPort</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1216"><abbr title="Response::isRedirect">isRedirect</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1202"><abbr title="Response::isNotFound">isNotFound</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1166"><abbr title="Response::isServerError">isServerError</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1178"><abbr title="Response::isOk">isOk</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1190"><abbr title="Response::isForbidden">isForbidden</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1618"><abbr title="Request::isNoCache">isNoCache</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1632"><abbr title="Request::getPreferredLanguage">getPreferredLanguage</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#283"><abbr title="ParameterBag::filter">filter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#305"><abbr title="ParameterBag::getIterator">getIterator</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#315"><abbr title="ParameterBag::count">count</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#287"><abbr title="Request::createFromGlobals">createFromGlobals</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#265"><abbr title="ParameterBag::getBoolean">getBoolean</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#251"><abbr title="ParameterBag::getInt">getInt</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#186"><abbr title="ParameterBag::remove">remove</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#202"><abbr title="ParameterBag::getAlpha">getAlpha</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#218"><abbr title="ParameterBag::getAlnum">getAlnum</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#234"><abbr title="ParameterBag::getDigits">getDigits</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#332"><abbr title="Request::create">create</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#433"><abbr title="Request::setFactory">setFactory</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#588"><abbr title="Request::getTrustedProxies">getTrustedProxies</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#602"><abbr title="Request::anonymous function">anonymous function</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#614"><abbr title="Request::getTrustedHosts">getTrustedHosts</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1610"><abbr title="Request::getETags">getETags</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#578"><abbr title="Request::setTrustedProxies">setTrustedProxies</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#540"><abbr title="Request::overrideGlobals">overrideGlobals</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#452"><abbr title="Request::duplicate">duplicate</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#502"><abbr title="Request::__clone">__clone</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#518"><abbr title="Request::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#73"><abbr title="ParameterBag::replace">replace</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#61"><abbr title="ParameterBag::keys">keys</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#83"><abbr title="HeaderBag::keys">keys</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#95"><abbr title="HeaderBag::replace">replace</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#108"><abbr title="HeaderBag::add">add</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#126"><abbr title="HeaderBag::get">get</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#71"><abbr title="HeaderBag::all">all</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#45"><abbr title="HeaderBag::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#358"><abbr title="RequestContext::setParameter">setParameter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#84"><abbr title="FileBag::convertFileInformation">convertFileInformation</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#125"><abbr title="FileBag::fixPhpFilesArray">fixPhpFilesArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#343"><abbr title="RequestContext::hasParameter">hasParameter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#331"><abbr title="RequestContext::getParameter">getParameter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#195"><abbr title="HeaderBag::contains">contains</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#285"><abbr title="HeaderBag::removeCacheControlDirective">removeCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#297"><abbr title="HeaderBag::getIterator">getIterator</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#307"><abbr title="HeaderBag::count">count</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#312"><abbr title="HeaderBag::getCacheControlHeader">getCacheControlHeader</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#275"><abbr title="HeaderBag::getCacheControlDirective">getCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#263"><abbr title="HeaderBag::hasCacheControlDirective">hasCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#207"><abbr title="HeaderBag::remove">remove</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#230"><abbr title="HeaderBag::getDate">getDate</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#249"><abbr title="HeaderBag::addCacheControlDirective">addCacheControlDirective</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#654"><abbr title="Request::getTrustedHeaderName">getTrustedHeaderName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#636"><abbr title="Request::setTrustedHeaderName">setTrustedHeaderName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1345"><abbr title="Request::getMethod">getMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1369"><abbr title="Request::getRealMethod">getRealMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1383"><abbr title="Request::getMimeType">getMimeType</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1401"><abbr title="Request::getFormat">getFormat</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1322"><abbr title="Request::setMethod">setMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1271"><abbr title="Request::getHost">getHost</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#673"><abbr title="Request::normalizeQueryString">normalizeQueryString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1174"><abbr title="Request::getRelativeUriForPath">getRelativeUriForPath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1220"><abbr title="Request::getQueryString">getQueryString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1243"><abbr title="Request::isSecure">isSecure</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1426"><abbr title="Request::setFormat">setFormat</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1450"><abbr title="Request::getRequestFormat">getRequestFormat</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1526"><abbr title="Request::getLocale">getLocale</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1538"><abbr title="Request::isMethod">isMethod</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1550"><abbr title="Request::isMethodSafe">isMethodSafe</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1564"><abbr title="Request::getContent">getContent</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1516"><abbr title="Request::setLocale">setLocale</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1504"><abbr title="Request::getDefaultLocale">getDefaultLocale</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1466"><abbr title="Request::setRequestFormat">setRequestFormat</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1478"><abbr title="Request::getContentType">getContentType</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1490"><abbr title="Request::setDefaultLocale">setDefaultLocale</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1132"><abbr title="Request::getUri">getUri</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1150"><abbr title="Request::getUriForPath">getUriForPath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#906"><abbr title="Request::getScriptName">getScriptName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#317"><abbr title="RequestContext::setParameters">setParameters</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#753"><abbr title="Request::get">get</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#717"><abbr title="Request::enableHttpMethodParameterOverride">enableHttpMethodParameterOverride</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#892"><abbr title="Request::getClientIp">getClientIp</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#837"><abbr title="Request::getClientIps">getClientIps</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#807"><abbr title="Request::hasSession">hasSession</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#777"><abbr title="Request::getSession">getSession</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#819"><abbr title="Request::setSession">setSession</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#727"><abbr title="Request::getHttpMethodParameterOverride">getHttpMethodParameterOverride</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#950"><abbr title="Request::getBasePath">getBasePath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1061"><abbr title="Request::getUserInfo">getUserInfo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1082"><abbr title="Request::getHttpHost">getHttpHost</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#292"><abbr title="RequestContext::setQueryString">setQueryString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1118"><abbr title="Request::getSchemeAndHttpHost">getSchemeAndHttpHost</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1051"><abbr title="Request::getPassword">getPassword</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1041"><abbr title="Request::getUser">getUser</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#305"><abbr title="RequestContext::getParameters">getParameters</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#987"><abbr title="Request::getScheme">getScheme</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1007"><abbr title="Request::getPort">getPort</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#790"><abbr title="Request::hasPreviousSession">hasPreviousSession</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#103"><abbr title="ParameterBag::get">get</a></a></td><td class="text-right">7%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#299"><abbr title="ResponseHeaderBag::computeCacheControlValue">computeCacheControlValue</a></a></td><td class="text-right">20%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#50"><abbr title="ControllerResolver::getController">getController</a></a></td><td class="text-right">23%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1773"><abbr title="Request::prepareRequestUri">prepareRequestUri</a></a></td><td class="text-right">27%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ServerBag.php.html#28"><abbr title="ServerBag::getHeaders">getHeaders</a></a></td><td class="text-right">30%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1820"><abbr title="Request::prepareBaseUrl">prepareBaseUrl</a></a></td><td class="text-right">34%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#108"><abbr title="ControllerResolver::doGetArguments">doGetArguments</a></a></td><td class="text-right">42%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#466"><abbr title="Response::setStatusCode">setStatusCode</a></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#94"><abbr title="ControllerResolver::getArguments">getArguments</a></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1912"><abbr title="Request::preparePathInfo">preparePathInfo</a></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#927"><abbr title="Request::getPathInfo">getPathInfo</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#33"><abbr title="HeaderBag::__construct">__construct</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#70"><abbr title="FileBag::add">add</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#400"><abbr title="Response::setContent">setContent</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#971"><abbr title="Request::getBaseUrl">getBaseUrl</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1101"><abbr title="Request::getRequestUri">getRequestUri</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#51"><abbr title="ResponseHeaderBag::__construct">__construct</a></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#154"><abbr title="HeaderBag::set">set</a></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#199"><abbr title="Response::__construct">__construct</a></a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#332"><abbr title="Request::create">create</abbr></a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#267"><abbr title="Response::prepare">prepare</abbr></a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1174"><abbr title="Request::getRelativeUriForPath">getRelativeUriForPath</abbr></a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#103"><abbr title="ParameterBag::get">get</abbr></a></td><td class="text-right">170</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1271"><abbr title="Request::getHost">getHost</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#257"><abbr title="ResponseHeaderBag::makeDisposition">makeDisposition</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#837"><abbr title="Request::getClientIps">getClientIps</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1007"><abbr title="Request::getPort">getPort</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#452"><abbr title="Request::duplicate">duplicate</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#944"><abbr title="Response::setCache">setCache</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ServerBag.php.html#28"><abbr title="ServerBag::getHeaders">getHeaders</abbr></a></td><td class="text-right">100</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1820"><abbr title="Request::prepareBaseUrl">prepareBaseUrl</abbr></a></td><td class="text-right">99</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1073"><abbr title="Response::isNotModified">isNotModified</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1241"><abbr title="Response::closeOutputBuffers">closeOutputBuffers</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1564"><abbr title="Request::getContent">getContent</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1632"><abbr title="Request::getPreferredLanguage">getPreferredLanguage</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1667"><abbr title="Request::getLanguages">getLanguages</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#125"><abbr title="FileBag::fixPhpFilesArray">fixPhpFilesArray</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#126"><abbr title="HeaderBag::get">get</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#50"><abbr title="ControllerResolver::getController">getController</abbr></a></td><td class="text-right">54</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#299"><abbr title="ResponseHeaderBag::computeCacheControlValue">computeCacheControlValue</abbr></a></td><td class="text-right">50</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#540"><abbr title="Request::overrideGlobals">overrideGlobals</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#287"><abbr title="Request::createFromGlobals">createFromGlobals</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#204"><abbr title="ResponseHeaderBag::getCookies">getCookies</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#673"><abbr title="Request::normalizeQueryString">normalizeQueryString</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1773"><abbr title="Request::prepareRequestUri">prepareRequestUri</abbr></a></td><td class="text-right">39</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#543"><abbr title="Response::isCacheable">isCacheable</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1261"><abbr title="Response::ensureIEOverSSLCompatibility">ensureIEOverSSLCompatibility</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1345"><abbr title="Request::getMethod">getMethod</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1401"><abbr title="Request::getFormat">getFormat</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#329"><abbr title="Response::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1082"><abbr title="Request::getHttpHost">getHttpHost</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1243"><abbr title="Request::isSecure">isSecure</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ParameterBag.php.html#283"><abbr title="ParameterBag::filter">filter</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#84"><abbr title="FileBag::convertFileInformation">convertFileInformation</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#108"><abbr title="ControllerResolver::doGetArguments">doGetArguments</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1886"><abbr title="Request::prepareBasePath">prepareBasePath</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#312"><abbr title="HeaderBag::getCacheControlHeader">getCacheControlHeader</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#176"><abbr title="ResponseHeaderBag::removeCookie">removeCookie</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#753"><abbr title="Request::get">get</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#45"><abbr title="HeaderBag::__toString">__toString</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#916"><abbr title="Response::setEtag">setEtag</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#749"><abbr title="Response::getMaxAge">getMaxAge</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#75"><abbr title="RequestContext::fromRequest">fromRequest</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#373"><abbr title="Response::send">send</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1962"><abbr title="Request::setPhpDefaultLocale">setPhpDefaultLocale</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#230"><abbr title="HeaderBag::getDate">getDate</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1029"><abbr title="Response::getVary">getVary</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1999"><abbr title="Request::createRequestFromFactory">createRequestFromFactory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1984"><abbr title="Request::getUrlencodedPrefix">getUrlencodedPrefix</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#144"><abbr title="ControllerResolver::createController">createController</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#56"><abbr title="FileBag::set">set</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1216"><abbr title="Response::isRedirect">isRedirect</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1383"><abbr title="Request::getMimeType">getMimeType</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1426"><abbr title="Request::setFormat">setFormat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1912"><abbr title="Request::preparePathInfo">preparePathInfo</abbr></a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#466"><abbr title="Response::setStatusCode">setStatusCode</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#150"><abbr title="ResponseHeaderBag::getCacheControlDirective">getCacheControlDirective</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#127"><abbr title="ResponseHeaderBag::remove">remove</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#725"><abbr title="Response::setExpires">setExpires</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#90"><abbr title="ResponseHeaderBag::replace">replace</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#813"><abbr title="Response::getTtl">getTtl</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#881"><abbr title="Response::setLastModified">setLastModified</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#997"><abbr title="Response::setNotModified">setNotModified</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1130"><abbr title="Response::isSuccessful">isSuccessful</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1118"><abbr title="Response::isInformational">isInformational</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-kernel/Controller/ControllerResolver.php.html#94"><abbr title="ControllerResolver::getArguments">getArguments</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1142"><abbr title="Response::isRedirection">isRedirection</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1154"><abbr title="Response::isClientError">isClientError</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#63"><abbr title="ResponseHeaderBag::__toString">__toString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#1166"><abbr title="Response::isServerError">isServerError</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/routing/RequestContext.php.html#331"><abbr title="RequestContext::getParameter">getParameter</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1739"><abbr title="Request::getAcceptableContentTypes">getAcceptableContentTypes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1061"><abbr title="Request::getUserInfo">getUserInfo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#987"><abbr title="Request::getScheme">getScheme</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#704"><abbr title="Response::getExpires">getExpires</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1132"><abbr title="Request::getUri">getUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1220"><abbr title="Request::getQueryString">getQueryString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#108"><abbr title="HeaderBag::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#950"><abbr title="Request::getBasePath">getBasePath</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#518"><abbr title="Request::__toString">__toString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#275"><abbr title="HeaderBag::getCacheControlDirective">getCacheControlDirective</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#636"><abbr title="Request::setTrustedHeaderName">setTrustedHeaderName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#654"><abbr title="Request::getTrustedHeaderName">getTrustedHeaderName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#790"><abbr title="Request::hasPreviousSession">hasPreviousSession</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#207"><abbr title="HeaderBag::remove">remove</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1450"><abbr title="Request::getRequestFormat">getRequestFormat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#580"><abbr title="Response::isValidateable">isValidateable</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#631"><abbr title="Response::mustRevalidate">mustRevalidate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#672"><abbr title="Response::getAge">getAge</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#688"><abbr title="Response::expire">expire</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1490"><abbr title="Request::setDefaultLocale">setDefaultLocale</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#2014"><abbr title="Request::isFromTrustedProxy">isFromTrustedProxy</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1723"><abbr title="Request::getEncodings">getEncodings</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1618"><abbr title="Request::isNoCache">isNoCache</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1526"><abbr title="Request::getLocale">getLocale</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1709"><abbr title="Request::getCharsets">getCharsets</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#400"><abbr title="Response::setContent">setContent</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#154"><abbr title="HeaderBag::set">set</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/FileBag.php.html#70"><abbr title="FileBag::add">add</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/HeaderBag.php.html#33"><abbr title="HeaderBag::__construct">__construct</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#1101"><abbr title="Request::getRequestUri">getRequestUri</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#927"><abbr title="Request::getPathInfo">getPathInfo</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Request.php.html#971"><abbr title="Request::getBaseUrl">getBaseUrl</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/ResponseHeaderBag.php.html#51"><abbr title="ResponseHeaderBag::__construct">__construct</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="vendor/symfony/http-foundation/Response.php.html#199"><abbr title="Response::__construct">__construct</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.2</a> using <a href="http://php.net/" target="_top">PHP 5.6.6</a> and <a href="http://phpunit.de/">PHPUnit 4.8.6</a> at Wed Sep 23 10:59:15 CST 2015.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.min.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,2,4,1,2,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([182,1,0,3,2,2,2,0,6,3,1,21], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,4,"<a href=\"src\/Simplex\/Framework.php.html#12\">Framework<\/a>"],[16.666666666667,19,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#24\">FileBag<\/a>"],[21.428571428571,44,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#21\">HeaderBag<\/a>"],[17.857142857143,34,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#21\">ParameterBag<\/a>"],[9.5637583892617,264,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#31\">Request<\/a>"],[9.1269841269841,145,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#21\">Response<\/a>"],[16.483516483516,45,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#21\">ResponseHeaderBag<\/a>"],[30.769230769231,16,"<a href=\"vendor\/symfony\/http-foundation\/ServerBag.php.html#21\">ServerBag<\/a>"],[33.333333333333,27,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#28\">ControllerResolver<\/a>"],[100,0,"<a href=\"vendor\/symfony\/routing\/Exception\/ResourceNotFoundException.php.html#23\">ResourceNotFoundException<\/a>"],[18.367346938776,26,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#26\">RequestContext<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"src\/Simplex\/Framework.php.html#17\">Framework::__construct<\/a>"],[100,3,"<a href=\"src\/Simplex\/Framework.php.html#23\">Framework::handle<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#35\">FileBag::__construct<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#45\">FileBag::replace<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#56\">FileBag::set<\/a>"],[75,2,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#70\">FileBag::add<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#84\">FileBag::convertFileInformation<\/a>"],[0,7,"<a href=\"vendor\/symfony\/http-foundation\/FileBag.php.html#125\">FileBag::fixPhpFilesArray<\/a>"],[75,2,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#33\">HeaderBag::__construct<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#45\">HeaderBag::__toString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#71\">HeaderBag::all<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#83\">HeaderBag::keys<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#95\">HeaderBag::replace<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#108\">HeaderBag::add<\/a>"],[0,7,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#126\">HeaderBag::get<\/a>"],[80,4,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#154\">HeaderBag::set<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#180\">HeaderBag::has<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#195\">HeaderBag::contains<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#207\">HeaderBag::remove<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#230\">HeaderBag::getDate<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#249\">HeaderBag::addCacheControlDirective<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#263\">HeaderBag::hasCacheControlDirective<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#275\">HeaderBag::getCacheControlDirective<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#285\">HeaderBag::removeCacheControlDirective<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#297\">HeaderBag::getIterator<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#307\">HeaderBag::count<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#312\">HeaderBag::getCacheControlHeader<\/a>"],[100,4,"<a href=\"vendor\/symfony\/http-foundation\/HeaderBag.php.html#338\">HeaderBag::parseCacheControl<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#37\">ParameterBag::__construct<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#49\">ParameterBag::all<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#61\">ParameterBag::keys<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#73\">ParameterBag::replace<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#85\">ParameterBag::add<\/a>"],[7.1428571428571,14,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#103\">ParameterBag::get<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#160\">ParameterBag::set<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#174\">ParameterBag::has<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#186\">ParameterBag::remove<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#202\">ParameterBag::getAlpha<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#218\">ParameterBag::getAlnum<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#234\">ParameterBag::getDigits<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#251\">ParameterBag::getInt<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#265\">ParameterBag::getBoolean<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#283\">ParameterBag::filter<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#305\">ParameterBag::getIterator<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ParameterBag.php.html#315\">ParameterBag::count<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#237\">Request::__construct<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#257\">Request::initialize<\/a>"],[0,6,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#287\">Request::createFromGlobals<\/a>"],[0,17,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#332\">Request::create<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#433\">Request::setFactory<\/a>"],[0,10,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#452\">Request::duplicate<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#502\">Request::__clone<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#518\">Request::__toString<\/a>"],[0,6,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#540\">Request::overrideGlobals<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#578\">Request::setTrustedProxies<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#588\">Request::getTrustedProxies<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#600\">Request::setTrustedHosts<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#602\">Request::anonymous function<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#614\">Request::getTrustedHosts<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#636\">Request::setTrustedHeaderName<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#654\">Request::getTrustedHeaderName<\/a>"],[0,6,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#673\">Request::normalizeQueryString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#717\">Request::enableHttpMethodParameterOverride<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#727\">Request::getHttpMethodParameterOverride<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#753\">Request::get<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#777\">Request::getSession<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#790\">Request::hasPreviousSession<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#807\">Request::hasSession<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#819\">Request::setSession<\/a>"],[0,10,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#837\">Request::getClientIps<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#892\">Request::getClientIp<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#906\">Request::getScriptName<\/a>"],[75,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#927\">Request::getPathInfo<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#950\">Request::getBasePath<\/a>"],[75,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#971\">Request::getBaseUrl<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#987\">Request::getScheme<\/a>"],[0,10,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1007\">Request::getPort<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1041\">Request::getUser<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1051\">Request::getPassword<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1061\">Request::getUserInfo<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1082\">Request::getHttpHost<\/a>"],[75,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1101\">Request::getRequestUri<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1118\">Request::getSchemeAndHttpHost<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1132\">Request::getUri<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1150\">Request::getUriForPath<\/a>"],[0,16,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1174\">Request::getRelativeUriForPath<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1220\">Request::getQueryString<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1243\">Request::isSecure<\/a>"],[0,12,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1271\">Request::getHost<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1322\">Request::setMethod<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1345\">Request::getMethod<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1369\">Request::getRealMethod<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1383\">Request::getMimeType<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1401\">Request::getFormat<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1426\">Request::setFormat<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1450\">Request::getRequestFormat<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1466\">Request::setRequestFormat<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1478\">Request::getContentType<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1490\">Request::setDefaultLocale<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1504\">Request::getDefaultLocale<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1516\">Request::setLocale<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1526\">Request::getLocale<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1538\">Request::isMethod<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1550\">Request::isMethodSafe<\/a>"],[0,8,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1564\">Request::getContent<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1610\">Request::getETags<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1618\">Request::isNoCache<\/a>"],[0,8,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1632\">Request::getPreferredLanguage<\/a>"],[0,8,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1667\">Request::getLanguages<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1709\">Request::getCharsets<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1723\">Request::getEncodings<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1739\">Request::getAcceptableContentTypes<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1760\">Request::isXmlHttpRequest<\/a>"],[27.586206896552,9,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1773\">Request::prepareRequestUri<\/a>"],[34.285714285714,17,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1820\">Request::prepareBaseUrl<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1886\">Request::prepareBasePath<\/a>"],[53.846153846154,7,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1912\">Request::preparePathInfo<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1941\">Request::initializeFormats<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1962\">Request::setPhpDefaultLocale<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1984\">Request::getUrlencodedPrefix<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#1999\">Request::createRequestFromFactory<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Request.php.html#2014\">Request::isFromTrustedProxy<\/a>"],[87.5,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#199\">Response::__construct<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#224\">Response::create<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#240\">Response::__toString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#251\">Response::__clone<\/a>"],[0,16,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#267\">Response::prepare<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#329\">Response::sendHeaders<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#359\">Response::sendContent<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#373\">Response::send<\/a>"],[75,5,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#400\">Response::setContent<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#418\">Response::getContent<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#432\">Response::setProtocolVersion<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#446\">Response::getProtocolVersion<\/a>"],[45.454545454545,5,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#466\">Response::setStatusCode<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#497\">Response::getStatusCode<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#511\">Response::setCharset<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#525\">Response::getCharset<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#543\">Response::isCacheable<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#567\">Response::isFresh<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#580\">Response::isValidateable<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#594\">Response::setPrivate<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#611\">Response::setPublic<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#631\">Response::mustRevalidate<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#645\">Response::getDate<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#659\">Response::setDate<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#672\">Response::getAge<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#688\">Response::expire<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#704\">Response::getExpires<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#725\">Response::setExpires<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#749\">Response::getMaxAge<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#775\">Response::setMaxAge<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#793\">Response::setSharedMaxAge<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#813\">Response::getTtl<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#831\">Response::setTtl<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#849\">Response::setClientTtl<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#865\">Response::getLastModified<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#881\">Response::setLastModified<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#901\">Response::getEtag<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#916\">Response::setEtag<\/a>"],[0,10,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#944\">Response::setCache<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#997\">Response::setNotModified<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1017\">Response::hasVary<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1029\">Response::getVary<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1053\">Response::setVary<\/a>"],[0,9,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1073\">Response::isNotModified<\/a>"],[100,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1106\">Response::isInvalid<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1118\">Response::isInformational<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1130\">Response::isSuccessful<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1142\">Response::isRedirection<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1154\">Response::isClientError<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1166\">Response::isServerError<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1178\">Response::isOk<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1190\">Response::isForbidden<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1202\">Response::isNotFound<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1216\">Response::isRedirect<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1228\">Response::isEmpty<\/a>"],[0,9,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1241\">Response::closeOutputBuffers<\/a>"],[0,5,"<a href=\"vendor\/symfony\/http-foundation\/Response.php.html#1261\">Response::ensureIEOverSSLCompatibility<\/a>"],[80,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#51\">ResponseHeaderBag::__construct<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#63\">ResponseHeaderBag::__toString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#80\">ResponseHeaderBag::allPreserveCase<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#90\">ResponseHeaderBag::replace<\/a>"],[90,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#106\">ResponseHeaderBag::set<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#127\">ResponseHeaderBag::remove<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#142\">ResponseHeaderBag::hasCacheControlDirective<\/a>"],[0,2,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#150\">ResponseHeaderBag::getCacheControlDirective<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#162\">ResponseHeaderBag::setCookie<\/a>"],[0,4,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#176\">ResponseHeaderBag::removeCookie<\/a>"],[0,6,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#204\">ResponseHeaderBag::getCookies<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#237\">ResponseHeaderBag::clearCookie<\/a>"],[0,10,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#257\">ResponseHeaderBag::makeDisposition<\/a>"],[20,9,"<a href=\"vendor\/symfony\/http-foundation\/ResponseHeaderBag.php.html#299\">ResponseHeaderBag::computeCacheControlValue<\/a>"],[30.769230769231,16,"<a href=\"vendor\/symfony\/http-foundation\/ServerBag.php.html#28\">ServerBag::getHeaders<\/a>"],[100,1,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#37\">ControllerResolver::__construct<\/a>"],[23.809523809524,10,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#50\">ControllerResolver::getController<\/a>"],[50,4,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#94\">ControllerResolver::getArguments<\/a>"],[42.105263157895,8,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#108\">ControllerResolver::doGetArguments<\/a>"],[0,3,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#144\">ControllerResolver::createController<\/a>"],[0,1,"<a href=\"vendor\/symfony\/http-kernel\/Controller\/ControllerResolver.php.html#166\">ControllerResolver::instantiateController<\/a>"],[100,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#56\">RequestContext::__construct<\/a>"],[0,3,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#75\">RequestContext::fromRequest<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#94\">RequestContext::getBaseUrl<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#108\">RequestContext::setBaseUrl<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#120\">RequestContext::getPathInfo<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#132\">RequestContext::setPathInfo<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#146\">RequestContext::getMethod<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#160\">RequestContext::setMethod<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#174\">RequestContext::getHost<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#188\">RequestContext::setHost<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#200\">RequestContext::getScheme<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#214\">RequestContext::setScheme<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#226\">RequestContext::getHttpPort<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#240\">RequestContext::setHttpPort<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#252\">RequestContext::getHttpsPort<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#266\">RequestContext::setHttpsPort<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#278\">RequestContext::getQueryString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#292\">RequestContext::setQueryString<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#305\">RequestContext::getParameters<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#317\">RequestContext::setParameters<\/a>"],[0,2,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#331\">RequestContext::getParameter<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#343\">RequestContext::hasParameter<\/a>"],[0,1,"<a href=\"vendor\/symfony\/routing\/RequestContext.php.html#358\">RequestContext::setParameter<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
