@@ -14,9 +14,8 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 use Simplex\Framework;
 
 $dispatcher = new EventDispatcher();
-
-$dispatcher->addListener('response', array(new Simplex\ContentLengthListener(), 'onResponse'), -255);
-$dispatcher->addListener('response', array(new Simplex\GoogleListener(), 'onResponse'));
+$dispatcher->addSubscriber(new Simplex\ContentLengthListener());
+$dispatcher->addSubscriber(new Simplex\GoogleListener());
 
 $request = Request::createFromGlobals();
 
