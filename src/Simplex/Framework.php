@@ -12,16 +12,4 @@ use Symfony\Component\HttpKernel\EventListener\ResponseListener;
 
 class Framework extends HttpKernel
 {
-    public function __construct($routes)
-    {
-        $context = new RequestContext();
-        $matcher = new UrlMatcher($routes,$context);
-        $resolver = new ControllerResolver();
-
-        $dispatcher = new EventDispatcher();
-        $dispatcher->addSubscriber(new RouterListener($matcher));
-        $dispatcher->addSubscriber(new ResponseListener('utf-8'));
-
-        parent::__construct($dispatcher,$resolver);
-    }
 }
